@@ -1,3 +1,10 @@
 group_id,group_name,group_question
-1,wc,"{""fi"":""Minkälaisia WC-tiloja rakennuksessa on?"", ""sv"":""[Svenska]Hurudana toaletter innehåller byggnaden?"", ""en"":""[English]What kinds of restrooms does the space contain?""}"
-
+1,WCT,"{""fi"":""Minkälaisia WC-tiloja rakennuksessa on?"",""sv"":""[Svenska]Minkälaisia WC-tiloja rakennuksessa on?"",""en"":""[English]Minkälaisia WC-tiloja rakennuksessa on?""}"
+2,Keittöt,"{""fi"":""Millaisia keittiöitä rakennuksessa on?"",""sv"":""[Svenska]Millaisia keittiöitä rakennuksessa on?"",""en"":""[English]Millaisia keittiöitä rakennuksessa on?""}"
+3,Saunat,"{""fi"":""Onko rakennuksessa sauna?"",""sv"":""[Svenska]Onko rakennuksessa sauna?"",""en"":""[English]Onko rakennuksessa sauna?""}"
+4,Pesuhuoneet,"{""fi"":""Onko rakennuksessa pesuhuone?"",""sv"":""[Svenska]Onko rakennuksessa pesuhuone?"",""en"":""[English]Onko rakennuksessa pesuhuone?""}"
+5,Pukuhuoneet,"{""fi"":""Onko rakennuksessa pukuhuone?"",""sv"":""[Svenska]Onko rakennuksessa pukuhuone?"",""en"":""[English]Onko rakennuksessa pukuhuone?""}"
+6,Siivoustilat,"{""fi"":""Millaisia siivoustiloja rakennuksessa on?"",""sv"":""[Svenska]Millaisia siivoustiloja rakennuksessa on?"",""en"":""[English]Millaisia siivoustiloja rakennuksessa on?""}"
+7,Varastot,"{""fi"":""Minkälaisia varastotiloja rakennuksessa on?"",""sv"":""[Svenska]Minkälaisia varastotiloja rakennuksessa on?"",""en"":""[English]Minkälaisia varastotiloja rakennuksessa on?""}"
+8,Tietotyö,"{""fi"":""Minkälaisia tietotyöhön liittyviä tiloja rakennuksessa on?"",""sv"":""[Svenska]Minkälaisia tietotyöhön liittyviä tiloja rakennuksessa on?"",""en"":""[English]Minkälaisia tietotyöhön liittyviä tiloja rakennuksessa on?""}"
+9,Tarkastukset,"{""fi"":""Minkälaisia tarkastuksiin liittyviä tiloja rakennuksessa on?"",""sv"":""[Svenska]Minkälaisia tarkastuksiin liittyviä tiloja rakennuksessa on?"",""en"":""[English]Minkälaisia tarkastuksiin liittyviä tiloja rakennuksessa on?""}"

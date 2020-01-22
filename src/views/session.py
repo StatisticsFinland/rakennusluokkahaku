@@ -66,7 +66,7 @@ def create_session_data_file(search_string, count=1):
         for y in x.answered_questions:
             df.loc[x.session_ident, y.attribute.attribute_id] = y.answer.value
 
-    df.to_csv('./tmp/session_export.csv')
+    df.to_csv('./tmp/session_export.csv', sep=';')
 
     return './tmp/session_export.csv'
 
