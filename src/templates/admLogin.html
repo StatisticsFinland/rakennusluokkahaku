@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="row">
+        <div class="col-5 mx-auto justify-content-center align-self-center">
+            <br />
+            <div class="card card-signin" style="background-color: lightgray">
+
+                <div class="card-body">
+                    <h5 class="card-title text-center">Sign In</h5>
+                    <div style="color:red">{{ error }}</div>
+                    <form class="form-signin center" method="POST" action="{{ url_for('views.auth_login') }}">
+                        
+                        <div class="form-label-group">
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+                                required autofocus>
+
+                        </div>
+                        <br />
+                        <div class="form-label-group">
+                            <input type="password" id="password" name="password" class="form-control"
+                                placeholder="Password" required>
+                        </div>
+                        
+                        <br />
+                        <button class="btn btn-block btn-primary text-uppercase center" type="submit"> Sign
+                            in</button>
+                        <br />
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

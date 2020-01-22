@@ -1,0 +1,2 @@
+# Skip flagged random.choice() calls
+skips: ['311']

@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container text-center">
+
+    <div class="container">
+        
+        {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+        {% if success %}<div class="alert alert-success">{{ success }}</div>{% endif %}
+        
+        <button data-toggle="collapse" data-target="#add-attribute" class="btn btn-link">Add attribute</button>
+        <div id="add-attribute" class="card collapse my-4">
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('views.add_attribute') }}">
+                    {{ form.csrf_token }}
+                    <div class="form-group text-left">
+                        {{ form.attribute_id.label }} 
+                        {{ form.attribute_id(class_="form-control") }}
+                    </div>
+                    <div class="form-group text-left">
+                        {{ form.attribute_name.label }}
+                        {{ form.attribute_name(class_="form-control") }}
+                    </div>
+                    <div class="form-group text-left">
+                        {{ form.attribute_question.label }}
+                        {{ form.attribute_question(class_="form-control") }}
+                    </div>
+                    <div class="form-group text-left">
+                        {{ form.attribute_tooltip.label }}
+                        {{ form.attribute_tooltip(class_="form-control") }}
+                    </div>
+                    <div class="form-group text-left">
+                        {{ form.attribute_group_id.label }}
+                        {{ form.attribute_group_id(class_="form-control") }}
+                    </div>
+                    <div class="form-check text-left">
+                        {{ form.attribute_active(class_="form-check-input") }}
+                        {{ form.attribute_active.label(class_="from-check-label") }}
+                    </div>
+                    <div class="form-group text-left">
+                        {{ form.attribute_probability.label}}
+                        {{ form.attribute_probability(class_="form-control") }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+        <hr/>
+        <table id="table_id" style="margin-top:2rem;" class="table tablez table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Attribute name</th>
+                    <th>Active</th>
+                    <th>Grouping id</th>
+                    <th>Question string</th>
+                    <th>Tooltip info</th>
+                    <th>Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for attr in attributes %}
+                <tr>
+                    <td>{{ attr.attribute_id }}</td>
+                    <td>
+                        <a href="{{ url_for('views.edit_attribute_name_view', attribute_id=attr.id) }}">
+                            {{ attr.attribute_name }}
+                        </a>
+                    </td>
+                    <td>
+                        {% if attr.active %}
+                        <form style="display:inline;" method="POST"
+                            action="{{ url_for('views.setActive', attribute_id=attr.id) }}">
+                            <button data-toggle="tooltip" title="Mark as inactive" class="btn btn-sm btn-success"
+                                type="submit"><span data-feather="refresh-cw"></span> </button>
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                        </form>
+                        {% else %}
+                        <form style="display:inline;" method="POST"
+                            action="{{ url_for('views.setActive', attribute_id=attr.id) }}">
+                            <button data-toggle="tooltip" title="Mark as active" class="btn btn-sm btn-danger"
+                                type="submit">
+                                <span data-feather="refresh-cw"> </button>
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                        </form>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <form method="POST"
+                            action="{{ url_for('views.setGroup', attribute_id=attr.id ) }}">
+                            <select name="select_group">
+                                {% if attr.part_of_group.grouping_key %}    
+                                    {% for x in groups %}                               
+                                        {% if x.id == attr.grouping_id %}
+                                            <option value="{{ attr.grouping_id }}" selected hidden> 
+                                                {{ attr.part_of_group.grouping_key }} - {{ x.group_name }}
+                                            </option> 
+                                        {% endif %}
+                                    {% endfor %}
+                                    <option value="None">Not grouped</option> 
+                                {% else %}
+                                    <option value="None" selected>Not grouped</option> 
+                                {% endif %}
+                                {% for x in groups %}  
+                                    {% if x.id != attr.grouping_id %}
+                                        <option value="{{ x.id }}">{{ x.grouping_key }} - {{ x.group_name }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                            <input type="submit" class="btn btn-sm btn-secondary" value="Change" />
+                        </form>                   
+                    </td>
+                    <td>
+                        <a href="{{ url_for('views.edit_question_view', attribute_id=attr.id) }}">
+                            {{ attr.attribute_question }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('views.edit_tooltip_view', attribute_id=attr.id) }}">
+                            {{ attr.attribute_tooltip }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('views.edit_attribute_probability_float', attribute_id=attr.id) }}">
+                            {{ attr.probability }}
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script async defer type="text/javascript">
+    $(document).ready(function () {
+        $('.tablez').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "pageLength": 25
+        });
+    });
+</script>
+{% endblock %}

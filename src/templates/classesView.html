@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container text-center">
+
+    <div class="container">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
+                    Toggle new buildingclass form
+               </button>
+               <div style="color:red">{{ error }}</div>
+               <div class="collapse" id="collapse">
+                   <div class="card my-4">
+                        <div class="card-body"> 
+                            <p>{{ info }}</p>
+                            <hr />
+                            <form method="POST" action="{{ post_url }}"
+                                style="width: auto; max-width: 400px; margin: auto;">
+                                <div class="form-group">
+                                    {% for key in object %}
+                                    <div class="row" style="margin-bottom:0.5rem">
+                                        <label for="{{ key }}">{{ key }}</label>
+                                        <input name="{{ key }}" class="form-control" id="{{ key }}" placeholder="{{ key }}" />
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="row justify-content-center">                                
+                                    <input type="submit" class="btn btn-primary" value="Submit" />
+                                </div>
+                            </form>
+                        </div>
+                   </div>
+               </div>
+               <hr />
+        <table id="table_id" style="margin-top:2rem;" class="table tablez table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th>Class id</th>
+                    <th>Class name</th>
+                    <th>Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for class in building_classes %}
+                <tr>
+                    <td>{{ class.class_id }}</td>
+                    <td>
+                        <a href="{{ url_for('views.link_bclass_attribute_view', class_id=class.id) }}">
+                            {{ class.class_name }}
+                        </a>
+                    </td>
+                    <td>
+                        <span style="display:none">{{ class.class_probability or 0 }}</span>
+                        <form method="POST"
+                            action="{{ url_for('views.edit_class_probability', class_id=class.id) }}">
+                            <div class="input-group">
+                                <input style="max-width:100px;" name="probability" class="form-control" id="probability" value="{{ class.class_probability or 0 }}" />
+                                <span class="input-group-btn" style="margin-left: 5px;">
+                                    <button type="submit" class="btn btn-sm btn-secondary">Save</button>
+                                </span>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script async defer type="text/javascript">
+    $(document).ready(function () {
+        $('.tablez').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "pageLength": 25
+        });
+    });
+</script>
+{% endblock %}

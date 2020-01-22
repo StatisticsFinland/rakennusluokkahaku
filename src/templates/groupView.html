@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container text-center">
+    <div class="container">
+
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
+             Toggle new group form
+        </button>
+        <div style="color:red">{{ error }}</div>
+        <div class="collapse" id="collapse">
+            <div id="add-attribute" class="card my-4">
+                <div class="card-body"> 
+                    <form method="POST" action="{{ url_for('views.group_view') }}"
+                        style="width: auto; max-width: 400px; margin: auto;">
+                        
+                        <div class="form-group">
+                            <div class="row" style="margin-bottom:0.5rem">
+                                <label for="group_name">Group Name</label>
+                                <input name="group_name" class="form-control" id="group_name"
+                                    placeholder="Name of the new group" required />
+                            </div>
+                            <div class="row" style="margin-bottom:0.5rem">
+                                <label for="group_key">Group key</label>
+                                <input name="group_key" class="form-control" id="group_key"
+                                    placeholder="Grouping key for the new group" required />
+                            </div>
+                            <div class="row" style="margin-bottom:0.5rem">
+                                <h4>Group Question</h4>
+                            </div>
+                            <div class="row" style="margin-bottom:0.5rem">
+                                <h1></h1>
+                                <label for="Suomeksi">Suomeksi</label>
+                                <input name="Suomeksi" class="form-control" id="fin" placeholder="Suomi" required />
+                            </div>
+                            <div class="row" style="margin-bottom:0.5rem">
+                                <label for="Svenska">Svenska</label>
+                                <input name="Svenska" class="form-control" id="sv" placeholder="Svenska" required />
+                            </div>
+                            <div class="row" style="margin-bottom:0.5rem">
+                                <label for="English">English</label>
+                                <input name="English" class="form-control" id="en" placeholder="English" required />
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <input type="submit" class="btn btn-primary" value="Create new group" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <table id="table_id" style="margin-top:2rem;" class="table tablez table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th>Group name</th>
+                    <th>Grouping key</th>
+                    <th>Question string</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for grp in groups %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('views.edit_group_name_view', group_id=grp.id) }}">
+                            {{ grp.group_name }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('views.edit_group_key_view', group_id=grp.id) }}">
+                            {{ grp.grouping_key }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('views.edit_group_question_view', group_id=grp.id) }}">
+                            {{ grp.group_question }}
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script async defer type="text/javascript">
+    $(document).ready(function () {
+        $('.tablez').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "pageLength": 25
+        });
+    });
+</script>
+{% endblock %}

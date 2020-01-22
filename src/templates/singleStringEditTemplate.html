@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <p>Original content: {{ string }} </p>
+
+    <hr />
+
+    <form method="POST" action="{{ post_url }}"
+        style="width: auto; max-width: 400px; margin: auto;">       
+            <div class="row" style="margin-bottom:0.5rem">
+                <input name="string" class="form-control" id="string" placeholder="{{ string }}"
+                    value="{{string }}" />
+            </div>
+        <div class="row justify-content-center">
+            <a href="{{ redirect_url }}" style="margin-right: 0.5rem;"
+                class="btn btn-secondary">Cancel</a>
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+    </form>
+
+</div>
+{% endblock %}

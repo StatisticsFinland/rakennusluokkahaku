@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container text-center">
+    <div class="container">
+        <button class="btn btn-primary" id="export_sessions">Export sessions</button>
+        <br />
+            <p> Hide sessions without a selected class </p>
+            <label class="switch">
+                <input id="filteroo" type="checkbox">
+                <span class="slider"></span>
+        </div>
+        <table id="table_id" style="margin-top:2rem;" class="table tablez table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th>Selected Class</th>
+                    <th>SessionID</th>
+                    <th>Answer Pattern</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for session in sessions %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('views.session_view', session=session.id) }}">
+                            {{ session.selected_class.class_id}} {{ session.selected_class.class_name or None}}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('views.session_view', session=session.id) }}">
+                            {{ session.session_ident }} 
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('views.session_view', session=session.id) }}">
+                            {{ session.answered_questions_string() }}
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script async defer type="text/javascript">
+    function downloadFile(blob, filename) {
+        // Create a hidden link element
+        var a = document.createElement("a");
+        document.body.appendChild(a);
+        a.style = "display: none";
+
+        // Attach the blob to the link and click it
+        var url = window.URL.createObjectURL(blob);
+        a.href = url;
+        a.download = filename;
+        a.click();
+        window.URL.revokeObjectURL(url);
+    }
+</script>
+<script async defer type="text/javascript">
+    $(document).ready(function () {
+        $('.tablez').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "pageLength": 25,
+            "order": [[0, "desc"]]
+        });
+
+        // Handle export button by reading the filter string and passing it to the appropriate endpoint
+        var url = new URL(window.location.href);
+        var min = url.searchParams.get("min");
+
+        var search_input = document.querySelector("#table_id_filter>label>input");
+        var export_button = document.getElementById("export_sessions");
+        export_button.addEventListener("click", function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "{{ url_for('views.session_export') }}");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    downloadFile(xhr.response, "session.csv");
+                }
+            }
+            xhr.responseType = "blob";
+            var form_data = new FormData();
+            form_data.append("search_string", search_input.value);
+            form_data.append("count",min);
+            xhr.send(form_data);
+        });
+    });
+</script>
+<script async defer type="text/javascript">
+    $(document).ready(function () {
+        var table = $('#table_id').DataTable();
+        $("#filteroo").click(function () {
+            if ($("#filteroo").is(':checked'))
+                table
+                    .columns(0)
+                    .search('^((?!None).)*$', true, false)
+                    .draw();
+            else
+                table
+                    .columns(0)
+                    .search('')
+                    .draw();
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container text-center">
+    <br/>
+    <div class="row">
+        <div class="col">
+            <h5>Selected class : {{ session.selected_class.class_id }} - {{ session.selected_class.class_name }}</p>
+        </div>
+    </div>
+    <div class="container">
+        <table id="table_id" style="margin-top:2rem;" class="table tablez table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Yes</th>
+                    <th>No</th>
+                    <th>Skip</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aq in session.answered_questions %}
+                <tr>
+                    <td>{{ aq.attribute.attribute_id }}</td>
+
+                    {% if aq.answer.value == 'yes' %}
+                    <td>
+                        <span style="color: green" data-feather="check">
+                    </td>
+                    <td>
+                        <span style="color: red" data-feather="x">
+                    </td>
+                    <td>
+                        <span style="color: red" data-feather="x">
+                    </td>
+                    {% elif aq.answer.value == 'no' %}
+                    <td>
+                        <span style="color: red" data-feather="x">
+                    </td>
+                    <td>
+                        <span style="color: green" data-feather="check">
+                    </td>
+                    <td>
+                        <span style="color: red" data-feather="x">
+                    </td>
+                    {% else %}
+                    <td>
+                        <span style="color: red" data-feather="x">
+                    </td>
+                    <td>
+                        <span style="color: red" data-feather="x">
+                    </td>
+                    <td>
+                        <span style="color: green" data-feather="check">
+                    </td>
+                    {% endif %}
+                    <td>
+                        {{ aq.date_created.strftime('%Y/%m/%d - %H:%M:%S') }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script async defer type="text/javascript">
+    $(document).ready(function () {
+        $('.tablez').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "pageLength": 25,
+            "order": [[ 4, "asc" ]]
+        });
+    });
+</script>
+{% endblock %}

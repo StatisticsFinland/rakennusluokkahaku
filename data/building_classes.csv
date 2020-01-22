@@ -1,0 +1,99 @@
+class_id,class_name,class_probability
+0110,"{""fi"":""Omakotitalot"", ""sv"":""[Svenska]Omakotitalot"", ""en"":""[English]Omakotitalot""}",0.04
+0111,"{""fi"":""Paritalot"", ""sv"":""[Svenska]Paritalot"", ""en"":""[English]Paritalot""}",0.04
+0112,"{""fi"":""Rivitalot"", ""sv"":""[Svenska]Rivitalot"", ""en"":""[English]Rivitalot""}",0.04
+0120,"{""fi"":""Pienkerrostalot"", ""sv"":""[Svenska]Pienkerrostalot"", ""en"":""[English]Pienkerrostalot""}",0.04
+0121,"{""fi"":""Asuinkerrostalot"", ""sv"":""[Svenska]Asuinkerrostalot"", ""en"":""[English]Asuinkerrostalot""}",0.04
+0130,"{""fi"":""Asuntolarakennukset"", ""sv"":""[Svenska]Asuntolarakennukset"", ""en"":""[English]Asuntolarakennukset""}",0.01
+0140,"{""fi"":""Erityisryhmien asuinrakennukset"", ""sv"":""[Svenska]Erityisryhmien asuinrakennukset"", ""en"":""[English]Erityisryhmien asuinrakennukset""}",0.01
+0210,"{""fi"":""Ympärivuotiseen käyttöön soveltuvat vapaa-ajan asuinrakennukset"", ""sv"":""[Svenska]Ympärivuotiseen käyttöön soveltuvat vapaa-ajan asuinrakennukset"", ""en"":""[English]Ympärivuotiseen käyttöön soveltuvat vapaa-ajan asuinrakennukset""}",0.02
+0211,"{""fi"":""Osavuotiseen käyttöön soveltuvat vapaa-ajan asuinrakennukset"", ""sv"":""[Svenska]Osavuotiseen käyttöön soveltuvat vapaa-ajan asuinrakennukset"", ""en"":""[English]Osavuotiseen käyttöön soveltuvat vapaa-ajan asuinrakennukset""}",0.02
+0310,"{""fi"":""Tukku- ja vähittäiskaupan myymälähallit"", ""sv"":""[Svenska]Tukku- ja vähittäiskaupan myymälähallit"", ""en"":""[English]Tukku- ja vähittäiskaupan myymälähallit""}",0.01
+0311,"{""fi"":""Kauppakeskukset ja liike- ja tavaratalot"", ""sv"":""[Svenska]Kauppakeskukset ja liike- ja tavaratalot"", ""en"":""[English]Kauppakeskukset ja liike- ja tavaratalot""}",0.01
+0319,"{""fi"":""Muut myymälärakennukset"", ""sv"":""[Svenska]Muut myymälärakennukset"", ""en"":""[English]Muut myymälärakennukset""}",0.01
+0320,"{""fi"":""Hotellit"", ""sv"":""[Svenska]Hotellit"", ""en"":""[English]Hotellit""}",0.01
+0321,"{""fi"":""Motellit, hostellit ja vastaavat majoitusliikerakennukset"", ""sv"":""[Svenska]Motellit, hostellit ja vastaavat majoitusliikerakennukset"", ""en"":""[English]Motellit, hostellit ja vastaavat majoitusliikerakennukset""}",0.01
+0322,"{""fi"":""Loma-, lepo- ja virkistyskodit"", ""sv"":""[Svenska]Loma-, lepo- ja virkistyskodit"", ""en"":""[English]Loma-, lepo- ja virkistyskodit""}",0.01
+0329,"{""fi"":""Muut majoitusliikerakennukset"", ""sv"":""[Svenska]Muut majoitusliikerakennukset"", ""en"":""[English]Muut majoitusliikerakennukset""}",0.01
+0330,"{""fi"":""Ravintolarakennukset ja vastaavat liikerakennukset"", ""sv"":""[Svenska]Ravintolarakennukset ja vastaavat liikerakennukset"", ""en"":""[English]Ravintolarakennukset ja vastaavat liikerakennukset""}",0.01
+0400,"{""fi"":""Toimistorakennukset"", ""sv"":""[Svenska]Toimistorakennukset"", ""en"":""[English]Toimistorakennukset""}",0.01
+0510,"{""fi"":""Asemarakennukset ja terminaalit"", ""sv"":""[Svenska]Asemarakennukset ja terminaalit"", ""en"":""[English]Asemarakennukset ja terminaalit""}",0.008
+0511,"{""fi"":""Ammattiliikenteen kaluston suojarakennukset"", ""sv"":""[Svenska]Ammattiliikenteen kaluston suojarakennukset"", ""en"":""[English]Ammattiliikenteen kaluston suojarakennukset""}",0.008
+0512,"{""fi"":""Ammattiliikenteen kaluston huoltorakennukset"", ""sv"":""[Svenska]Ammattiliikenteen kaluston huoltorakennukset"", ""en"":""[English]Ammattiliikenteen kaluston huoltorakennukset""}",0.008
+0513,"{""fi"":""Pysäköintitalot ja -hallit"", ""sv"":""[Svenska]Pysäköintitalot ja -hallit"", ""en"":""[English]Pysäköintitalot ja -hallit""}",0.008
+0514,"{""fi"":""Kulkuneuvojen katokset"", ""sv"":""[Svenska]Kulkuneuvojen katokset"", ""en"":""[English]Kulkuneuvojen katokset""}",0.01
+0520,"{""fi"":""Datakeskukset ja laitetilat"", ""sv"":""[Svenska]Datakeskukset ja laitetilat"", ""en"":""[English]Datakeskukset ja laitetilat""}",0.005
+0521,"{""fi"":""Tietoliikenteen rakennukset"", ""sv"":""[Svenska]Tietoliikenteen rakennukset"", ""en"":""[English]Tietoliikenteen rakennukset""}",0.005
+0590,"{""fi"":""Muut liikenteen rakennukset"", ""sv"":""[Svenska]Muut liikenteen rakennukset"", ""en"":""[English]Muut liikenteen rakennukset""}",0.01
+0610,"{""fi"":""Terveys- ja hyvinvointikeskukset"", ""sv"":""[Svenska]Terveys- ja hyvinvointikeskukset"", ""en"":""[English]Terveys- ja hyvinvointikeskukset""}",0.01
+0611,"{""fi"":""Keskussairaalat"", ""sv"":""[Svenska]Keskussairaalat"", ""en"":""[English]Keskussairaalat""}",0.005
+0612,"{""fi"":""Erikoissairaalat ja laboratoriorakennukset"", ""sv"":""[Svenska]Erikoissairaalat ja laboratoriorakennukset"", ""en"":""[English]Erikoissairaalat ja laboratoriorakennukset""}",0.005
+0613,"{""fi"":""Muut sairaalat"", ""sv"":""[Svenska]Muut sairaalat"", ""en"":""[English]Muut sairaalat""}",0.01
+0614,"{""fi"":""Kuntoutuslaitokset"", ""sv"":""[Svenska]Kuntoutuslaitokset"", ""en"":""[English]Kuntoutuslaitokset""}",0.01
+0619,"{""fi"":""Muut terveydenhuoltorakennukset"", ""sv"":""[Svenska]Muut terveydenhuoltorakennukset"", ""en"":""[English]Muut terveydenhuoltorakennukset""}",0.01
+0620,"{""fi"":""Laitospalvelujen rakennukset"", ""sv"":""[Svenska]Laitospalvelujen rakennukset"", ""en"":""[English]Laitospalvelujen rakennukset""}",0.01
+0621,"{""fi"":""Avopalvelujen rakennukset"", ""sv"":""[Svenska]Avopalvelujen rakennukset"", ""en"":""[English]Avopalvelujen rakennukset""}",0.01
+0630,"{""fi"":""Vankilarakennukset"", ""sv"":""[Svenska]Vankilarakennukset"", ""en"":""[English]Vankilarakennukset""}",0.003
+0710,"{""fi"":""Teatterit, musiikki- ja kongressitalot"", ""sv"":""[Svenska]Teatterit, musiikki- ja kongressitalot"", ""en"":""[English]Teatterit, musiikki- ja kongressitalot""}",0.01
+0711,"{""fi"":""Elokuvateatterit"", ""sv"":""[Svenska]Elokuvateatterit"", ""en"":""[English]Elokuvateatterit""}",0.01
+0712,"{""fi"":""Kirjastot ja arkistot"", ""sv"":""[Svenska]Kirjastot ja arkistot"", ""en"":""[English]Kirjastot ja arkistot""}",0.01
+0713,"{""fi"":""Museot ja taidegalleriat"", ""sv"":""[Svenska]Museot ja taidegalleriat"", ""en"":""[English]Museot ja taidegalleriat""}",0.01
+0714,"{""fi"":""Näyttely- ja messuhallit"", ""sv"":""[Svenska]Näyttely- ja messuhallit"", ""en"":""[English]Näyttely- ja messuhallit""}",0.01
+0720,"{""fi"":""Seura- ja kerhorakennukset"", ""sv"":""[Svenska]Seura- ja kerhorakennukset"", ""en"":""[English]Seura- ja kerhorakennukset""}",0.01
+0730,"{""fi"":""Uskonnonharjoittamisrakennukset"", ""sv"":""[Svenska]Uskonnonharjoittamisrakennukset"", ""en"":""[English]Uskonnonharjoittamisrakennukset""}",0.01
+0731,"{""fi"":""Seurakuntatalot"", ""sv"":""[Svenska]Seurakuntatalot"", ""en"":""[English]Seurakuntatalot""}",0.01
+0739,"{""fi"":""Muut uskonnollisten yhteisöjen rakennukset"", ""sv"":""[Svenska]Muut uskonnollisten yhteisöjen rakennukset"", ""en"":""[English]Muut uskonnollisten yhteisöjen rakennukset""}",0.01
+0740,"{""fi"":""Jäähallit"", ""sv"":""[Svenska]Jäähallit"", ""en"":""[English]Jäähallit""}",0.01
+0741,"{""fi"":""Uimahallit"", ""sv"":""[Svenska]Uimahallit"", ""en"":""[English]Uimahallit""}",0.01
+0742,"{""fi"":""Monitoimihallit"", ""sv"":""[Svenska]Monitoimihallit"", ""en"":""[English]Monitoimihallit""}",0.01
+0743,"{""fi"":""Urheilu- ja palloiluhallit"", ""sv"":""[Svenska]Urheilu- ja palloiluhallit"", ""en"":""[English]Urheilu- ja palloiluhallit""}",0.01
+0744,"{""fi"":""Stadion- ja katsomorakennukset"", ""sv"":""[Svenska]Stadion- ja katsomorakennukset"", ""en"":""[English]Stadion- ja katsomorakennukset""}",0.01
+0749,"{""fi"":""Muut urheilu- ja liikuntarakennukset"", ""sv"":""[Svenska]Muut urheilu- ja liikuntarakennukset"", ""en"":""[English]Muut urheilu- ja liikuntarakennukset""}",0.01
+0790,"{""fi"":""Muut kokoontumisrakennukset"", ""sv"":""[Svenska]Muut kokoontumisrakennukset"", ""en"":""[English]Muut kokoontumisrakennukset""}",0.01
+0810,"{""fi"":""Lasten päiväkodit"", ""sv"":""[Svenska]Lasten päiväkodit"", ""en"":""[English]Lasten päiväkodit""}",0.005
+0820,"{""fi"":""Yleissivistävien oppilaitosten rakennukset"", ""sv"":""[Svenska]Yleissivistävien oppilaitosten rakennukset"", ""en"":""[English]Yleissivistävien oppilaitosten rakennukset""}",0.005
+0830,"{""fi"":""Ammatillisten oppilaitosten rakennukset"", ""sv"":""[Svenska]Ammatillisten oppilaitosten rakennukset"", ""en"":""[English]Ammatillisten oppilaitosten rakennukset""}",0.005
+0840,"{""fi"":""Korkeakoulurakennukset"", ""sv"":""[Svenska]Korkeakoulurakennukset"", ""en"":""[English]Korkeakoulurakennukset""}",0.005
+0841,"{""fi"":""Tutkimuslaitosrakennukset"", ""sv"":""[Svenska]Tutkimuslaitosrakennukset"", ""en"":""[English]Tutkimuslaitosrakennukset""}",0.005
+0890,"{""fi"":""Vapaan sivistystyön opetusrakennukset"", ""sv"":""[Svenska]Vapaan sivistystyön opetusrakennukset"", ""en"":""[English]Vapaan sivistystyön opetusrakennukset""}",0.005
+0891,"{""fi"":""Järjestöjen, liittojen, työnantajien ja vastaavien opetusrakennukset"", ""sv"":""[Svenska]Järjestöjen, liittojen, työnantajien ja vastaavien opetusrakennukset"", ""en"":""[English]Järjestöjen, liittojen, työnantajien ja vastaavien opetusrakennukset""}",0.005
+0910,"{""fi"":""Yleiskäyttöiset teollisuushallit"", ""sv"":""[Svenska]Yleiskäyttöiset teollisuushallit"", ""en"":""[English]Yleiskäyttöiset teollisuushallit""}",0.005
+0911,"{""fi"":""Raskaan teollisuuden tehdasrakennukset"", ""sv"":""[Svenska]Raskaan teollisuuden tehdasrakennukset"", ""en"":""[English]Raskaan teollisuuden tehdasrakennukset""}",0.005
+0912,"{""fi"":""Elintarviketeollisuuden tuotantorakennukset"", ""sv"":""[Svenska]Elintarviketeollisuuden tuotantorakennukset"", ""en"":""[English]Elintarviketeollisuuden tuotantorakennukset""}",0.005
+0919,"{""fi"":""Muut teollisuuden tuotantorakennukset"", ""sv"":""[Svenska]Muut teollisuuden tuotantorakennukset"", ""en"":""[English]Muut teollisuuden tuotantorakennukset""}",0.005
+0920,"{""fi"":""Teollisuus- ja pienteollisuustalot"", ""sv"":""[Svenska]Teollisuus- ja pienteollisuustalot"", ""en"":""[English]Teollisuus- ja pienteollisuustalot""}",0.005
+0930,"{""fi"":""Metallimalmien käsittelyrakennukset"", ""sv"":""[Svenska]Metallimalmien käsittelyrakennukset"", ""en"":""[English]Metallimalmien käsittelyrakennukset""}",0.005
+0939,"{""fi"":""Muut kaivannaistoiminnan rakennukset"", ""sv"":""[Svenska]Muut kaivannaistoiminnan rakennukset"", ""en"":""[English]Muut kaivannaistoiminnan rakennukset""}",0.005
+1010,"{""fi"":""Sähköenergian tuotantorakennukset"", ""sv"":""[Svenska]Sähköenergian tuotantorakennukset"", ""en"":""[English]Sähköenergian tuotantorakennukset""}",0.005
+1011,"{""fi"":""Lämpö- ja kylmäenergian tuotantorakennukset"", ""sv"":""[Svenska]Lämpö- ja kylmäenergian tuotantorakennukset"", ""en"":""[English]Lämpö- ja kylmäenergian tuotantorakennukset""}",0.005
+1090,"{""fi"":""Energiansiirtorakennukset"", ""sv"":""[Svenska]Energiansiirtorakennukset"", ""en"":""[English]Energiansiirtorakennukset""}",0.005
+1091,"{""fi"":""Energianvarastointirakennukset"", ""sv"":""[Svenska]Energianvarastointirakennukset"", ""en"":""[English]Energianvarastointirakennukset""}",0.005
+1110,"{""fi"":""Vedenotto-, vedenpuhdistus- ja vedenjakelurakennukset"", ""sv"":""[Svenska]Vedenotto-, vedenpuhdistus- ja vedenjakelurakennukset"", ""en"":""[English]Vedenotto-, vedenpuhdistus- ja vedenjakelurakennukset""}",0.005
+1120,"{""fi"":""Jätteenkeruu-, jätteenkäsittely- ja jätteenvarastointirakennukset"", ""sv"":""[Svenska]Jätteenkeruu-, jätteenkäsittely- ja jätteenvarastointirakennukset"", ""en"":""[English]Jätteenkeruu-, jätteenkäsittely- ja jätteenvarastointirakennukset""}",0.005
+1130,"{""fi"":""Materiaalien kierrätysrakennukset"", ""sv"":""[Svenska]Materiaalien kierrätysrakennukset"", ""en"":""[English]Materiaalien kierrätysrakennukset""}",0.005
+1210,"{""fi"":""Lämmittämättömät varastot"", ""sv"":""[Svenska]Lämmittämättömät varastot"", ""en"":""[English]Lämmittämättömät varastot""}",0.01
+1211,"{""fi"":""Lämpimät varastot"", ""sv"":""[Svenska]Lämpimät varastot"", ""en"":""[English]Lämpimät varastot""}",0.01
+1212,"{""fi"":""Kylmä- ja pakastevarastot"", ""sv"":""[Svenska]Kylmä- ja pakastevarastot"", ""en"":""[English]Kylmä- ja pakastevarastot""}",0.01
+1213,"{""fi"":""Muut olosuhteiltaan säädellyt varastot"", ""sv"":""[Svenska]Muut olosuhteiltaan säädellyt varastot"", ""en"":""[English]Muut olosuhteiltaan säädellyt varastot""}",0.01
+1214,"{""fi"":""Logistiikkakeskukset ja muut monikäyttöiset varastorakennukset"", ""sv"":""[Svenska]Logistiikkakeskukset ja muut monikäyttöiset varastorakennukset"", ""en"":""[English]Logistiikkakeskukset ja muut monikäyttöiset varastorakennukset""}",0.01
+1215,"{""fi"":""Varastokatokset"", ""sv"":""[Svenska]Varastokatokset"", ""en"":""[English]Varastokatokset""}",0.01
+1310,"{""fi"":""Paloasemat"", ""sv"":""[Svenska]Paloasemat"", ""en"":""[English]Paloasemat""}",0.005
+1311,"{""fi"":""Väestönsuojat"", ""sv"":""[Svenska]Väestönsuojat"", ""en"":""[English]Väestönsuojat""}",0.01
+1319,"{""fi"":""Muut pelastustoimen rakennukset"", ""sv"":""[Svenska]Muut pelastustoimen rakennukset"", ""en"":""[English]Muut pelastustoimen rakennukset""}",0.01
+1410,"{""fi"":""Lypsykarjarakennukset"", ""sv"":""[Svenska]Lypsykarjarakennukset"", ""en"":""[English]Lypsykarjarakennukset""}",0.01
+1411,"{""fi"":""Lihakarjarakennukset"", ""sv"":""[Svenska]Lihakarjarakennukset"", ""en"":""[English]Lihakarjarakennukset""}",0.01
+1412,"{""fi"":""Sikalat"", ""sv"":""[Svenska]Sikalat"", ""en"":""[English]Sikalat""}",0.01
+1413,"{""fi"":""Lampolat ja vuohinavetat"", ""sv"":""[Svenska]Lampolat ja vuohinavetat"", ""en"":""[English]Lampolat ja vuohinavetat""}",0.01
+1414,"{""fi"":""Hevostallit"", ""sv"":""[Svenska]Hevostallit"", ""en"":""[English]Hevostallit""}",0.01
+1415,"{""fi"":""Siipikarjarakennukset"", ""sv"":""[Svenska]Siipikarjarakennukset"", ""en"":""[English]Siipikarjarakennukset""}",0.01
+1416,"{""fi"":""Turkiseläinrakennukset"", ""sv"":""[Svenska]Turkiseläinrakennukset"", ""en"":""[English]Turkiseläinrakennukset""}",0.01
+1419,"{""fi"":""Muut eläinsuojat"", ""sv"":""[Svenska]Muut eläinsuojat"", ""en"":""[English]Muut eläinsuojat""}",0.01
+1490,"{""fi"":""Kasvihuoneet"", ""sv"":""[Svenska]Kasvihuoneet"", ""en"":""[English]Kasvihuoneet""}",0.01
+1491,"{""fi"":""Viljankuivaamot ja viljansäilytysrakennukset"", ""sv"":""[Svenska]Viljankuivaamot ja viljansäilytysrakennukset"", ""en"":""[English]Viljankuivaamot ja viljansäilytysrakennukset""}",0.01
+1492,"{""fi"":""Maatalouden varastorakennukset"", ""sv"":""[Svenska]Maatalouden varastorakennukset"", ""en"":""[English]Maatalouden varastorakennukset""}",0.01
+1493,"{""fi"":""Lantalat"", ""sv"":""[Svenska]Lantalat"", ""en"":""[English]Lantalat""}",0.01
+1499,"{""fi"":""Muut maa-, metsä- ja kalatalouden rakennukset"", ""sv"":""[Svenska]Muut maa-, metsä- ja kalatalouden rakennukset"", ""en"":""[English]Muut maa-, metsä- ja kalatalouden rakennukset""}",0.01
+1910,"{""fi"":""Saunarakennukset"", ""sv"":""[Svenska]Saunarakennukset"", ""en"":""[English]Saunarakennukset""}",0.01
+1911,"{""fi"":""Talousrakennukset"", ""sv"":""[Svenska]Talousrakennukset"", ""en"":""[English]Talousrakennukset""}",0.01
+1912,"{""fi"":""Majat ja tuvat"", ""sv"":""[Svenska]Majat ja tuvat"", ""en"":""[English]Majat ja tuvat""}",0.01
+1919,"{""fi"":""Muualla luokittelemattomat rakennukset"", ""sv"":""[Svenska]Muualla luokittelemattomat rakennukset"", ""en"":""[English]Muualla luokittelemattomat rakennukset""}",0.005

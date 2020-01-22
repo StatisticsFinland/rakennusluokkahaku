@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container text-center">
+    <h2>{{ bclass.class_name }}</h2>
+    <div class="container">
+        <table id="table_id" style="margin-top:2rem;" class="table tablez table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Has attribute</th>
+                    <th>Custom probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for link in links %}
+                <tr>
+                    <td>
+                        {{ link.attribute.attribute_name }}
+                    </td>
+                    <td>
+                        {% if link.class_has_attribute %}
+                            <form style="display:inline;" method="POST"
+                                action="{{ url_for('views.toggle_link_between_class_attribute', class_attribute_id=link.id) }}">
+                                <button data-toggle="tooltip" title="Mark as inactive" class="btn btn-sm btn-success"
+                                    type="submit"><span data-feather="refresh-cw"></span> </button>
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                            </form>
+                        {% else %}
+                            <form style="display:inline;" method="POST"
+                                action="{{ url_for('views.toggle_link_between_class_attribute', class_attribute_id=link.id) }}">
+                                <button data-toggle="tooltip" title="Mark as active" class="btn btn-sm btn-danger"
+                                    type="submit">
+                                    <span data-feather="refresh-cw"> </button>
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                            </form>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <span style="display:none">{{ link.custom_probability or 0 }}</span>
+                        <form class="form-group" method="POST"
+                            action="{{ url_for('views.edit_class_attribute_probability', class_attribute_id=link.id) }}">
+                            <div class="input-group justify-content-center align-items-center">
+                                <input style="max-width:100px;" name="probability" class="form-control" id="probability" value="{{ link.custom_probability or 0 }}" />
+                                <span class="input-group-btn" style="margin-left: 5px;">
+                                    <button type="submit" class="btn btn-sm btn-secondary">Save</button>
+                                </span>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script async defer type="text/javascript">
+    $(document).ready(function () {
+        $('.tablez').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "pageLength": 25,
+            "order": [[ 1, "desc" ]]
+        });
+    });
+</script>
+{% endblock %}

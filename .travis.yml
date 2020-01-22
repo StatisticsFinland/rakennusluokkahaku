@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.6"
+before_script:
+  - python import_data.py data test.db
+script:
+  - python -m pytest --cov=src tests/
+after_success:
+  - coveralls
+

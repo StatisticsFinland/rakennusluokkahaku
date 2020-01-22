@@ -1,0 +1,9 @@
+venv/
+*__pycache__*
+.vscode/
+*.pyc
+htmlcov/
+.coverage
+*.db
+# secret_key.py
+\#*\#

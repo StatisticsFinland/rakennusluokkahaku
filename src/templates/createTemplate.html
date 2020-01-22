@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <p>{{ info }}</p>
+
+    <hr />
+
+    <form method="POST" action="{{ post_url }}"
+        style="width: auto; max-width: 400px; margin: auto;">
+        <div class="form-group">
+            {% for key in object %}
+            <div class="row" style="margin-bottom:0.5rem">
+                <label for="{{ key }}">{{ key }}</label>
+                <input name="{{ key }}" class="form-control" id="{{ key }}" placeholder="{{ key }}" />
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row justify-content-center">
+            <a href="{{ redirect_url }}" style="margin-right: 0.5rem;"
+                class="btn btn-secondary">Cancel</a>
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+    </form>
+
+
+</div>
+{% endblock %}
