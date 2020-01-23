@@ -3,6 +3,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b15f2e53897b445a9b1853cec5797de2)](https://www.codacy.com/manual/kotommi/FaceTed-Backend?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ohtu-FaceTed/FaceTed-Backend&amp;utm_campaign=Badge_Grade)
 [![Coverage Status](https://coveralls.io/repos/github/Ohtu-FaceTed/FaceTed-Backend/badge.svg?branch=master)](https://coveralls.io/github/Ohtu-FaceTed/FaceTed-Backend?branch=master)
 
+### Front end repo
+https://github.com/StatisticsFinland/rakennusluokkahaku-front-end
+
 ### Quick Start
 ```
 python -m venv venv/
