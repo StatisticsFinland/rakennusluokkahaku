@@ -30,7 +30,7 @@ numpy==1.17.2
 packaging==19.1
 pandas==0.25.1
 pluggy==0.13.0
-py==1.8.0
+py==1.10.0
 pycodestyle==2.5.0
 pycparser==2.19
 pylint==2.4.2
